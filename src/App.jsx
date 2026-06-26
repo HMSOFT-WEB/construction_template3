@@ -51,6 +51,7 @@ function WireframeBuilding() {
   return (
     <group ref={groupRef} position={[0, -5, 0]}>
       {floors}
+      {bracing}
     </group>
   );
 }
