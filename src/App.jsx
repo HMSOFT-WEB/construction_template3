@@ -61,7 +61,7 @@ function Header() {
     <header className="header">
       <div className="header-inner">
         <div className="logo">
-          <img src="/logo.png" alt="HMSOFT E&C" onError={(e) => e.target.style.display='none'} />
+          <img src="./logo.png" alt="HMSOFT E&C" onError={(e) => e.target.style.display='none'} />
           HMSOFT E&C
         </div>
         <nav className="nav-links">
@@ -132,13 +132,13 @@ function MegaProjects() {
       category: "Infrastructure",
       title: "Global Logistics Hub, Busan",
       desc: "A massive 500,000 sqm automated port facility designed to handle 10 million TEU annually with zero-emission smart cranes.",
-      icon: <Factory size={64} opacity={0.2} color="#f59e0b" />
+      image: "./project1.png"
     },
     {
       category: "Industrial IT",
       title: "Hyper-Scale Data Center Alpha",
       desc: "Tier-4 certified underground data facility featuring advanced geothermal cooling systems and military-grade structural integrity.",
-      icon: <Settings size={64} opacity={0.2} color="#f59e0b" />
+      image: "./project2.png"
     }
   ];
 
@@ -161,7 +161,7 @@ function MegaProjects() {
             transition={{ duration: 0.6, delay: idx * 0.2 }}
           >
             <div className="project-image-placeholder">
-               {proj.icon}
+               <img src={proj.image} alt={proj.title} className="project-image" />
             </div>
             <div className="project-content">
               <span className="project-category">{proj.category}</span>
