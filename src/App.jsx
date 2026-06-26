@@ -37,9 +37,9 @@ function WireframeBuilding() {
     );
   }
 
-  // Cross bracing
   const bracing = [];
   for(let i=0; i < levels -1; i++) {
+     const currentSize = size - (i * 0.15);
      bracing.push(
         <mesh key={`brace-${i}`} position={[0, i*height + height/2, 0]} rotation={[0, Math.PI/4, 0]}>
              <cylinderGeometry args={[0.02, 0.02, currentSize*1.4, 4]} />
